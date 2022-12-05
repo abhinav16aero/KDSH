@@ -22,27 +22,30 @@ const Navbar = ({ color, noborder }) => {
       document.removeEventListener("scroll", navColor);
     };
   }, []);
+  
+  function Navbar() {
   const [click, setClick] = useState(false);
   const [dropdown, setDropdown] = useState(false);
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
+
+  const onMouseEnter = () => {
+    if (window.innerWidth < 960) {
+      setDropdown(false);
+    } else {
+      setDropdown(true);
+    }
+  };
+
+  const onMouseLeave = () => {
+    if (window.innerWidth < 960) {
+      setDropdown(false);
+    } else {
+      setDropdown(false);
+    }
+  };
   
-    const onMouseEnter = () => {
-      if (window.innerWidth < 960) {
-        Dropdown(false);
-      } else {
-        Dropdown(true);
-      }
-    };
-  
-    const onMouseLeave = () => {
-      if (window.innerWidth < 960) {
-        Dropdown(false);
-      } else {
-        Dropdown(false);
-      }
-    };
 
   return (
     <div className="kdag-nav-container">
@@ -154,5 +157,6 @@ const Navbar = ({ color, noborder }) => {
     </div>
   );
 };
+}
 
 export default Navbar;
