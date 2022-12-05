@@ -23,7 +23,6 @@ const Navbar = ({ color, noborder }) => {
     };
   }, []);
   
-  function Navbar() {
   const [click, setClick] = useState(false);
   const [dropdown, setDropdown] = useState(false);
 
@@ -157,6 +156,5 @@ const Navbar = ({ color, noborder }) => {
     </div>
   );
 };
-}
 
 export default Navbar;
