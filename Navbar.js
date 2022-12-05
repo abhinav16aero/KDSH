@@ -141,8 +141,7 @@ const Navbar = ({ color, noborder }) => {
                   <li>
                     <NavLink to="/blogs">Blog</NavLink>
                   </li>
-                  <li onMouseEnter={onMouseEnter}
-            onMouseLeave={onMouseLeave}>
+                  <li>
                     <NavLink to="/team">Team</NavLink>
                   </li>
                   <li>
