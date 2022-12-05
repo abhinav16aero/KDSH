@@ -144,7 +144,8 @@ const Navbar = ({ color, noborder }) => {
                   <li>
                     <NavLink to="/team">Team</NavLink>
                   </li>
-                  <li>
+                  <li onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}>
                     <NavLink to="/Register Now"></NavLink>
                   </li>
                 </ul>
